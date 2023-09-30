@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Georgia;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+background-position: center;
+  background-size: cover;
+
+}
+
+.header {
+
+  overflow: hidden;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: honeydew;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header-right 
+{
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+img {
+  border-radius: 70%;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a target="" href="#">
+  <img src="#" alt="#" style="width:95px">
+  </div>
+</div>
+</div>
+</body>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Georgia, Georgia, Georgia;
+}
+
+.himage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+  height: 45%;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  position: relative;
+}
+.htext {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+}
+</style>
+</head>
+<style>
+* {
+  padding: 3;
+  margin: 5px;
+  text-align: center;
+}
+body {
+
+}
+.calculator
+{
+  padding: 140px;	
+  width: 350px;
+  height: 320px;
+}
+#display 
+{
+  width: 320px;
+  height: 40px;
+  text-align: right;
+  border: 3px solid white;
+  font-size: 18px;
+  left: 2px;
+  top: 2px;
+/*  color: #DFFF00;*/
+}
+.btnTop{
+  color: black;
+  font-size: 14px;
+  margin: auto;
+  width: 50px;
+  height: 25px;
+  border-radius: 50%;
+}
+.btnNum {
+  color: #40E0D0;
+  font-size: 14px;
+  margin: auto;
+  width: 50px;
+  height: 25px;
+}
+.btnMath {
+  color: black;
+  font-size: 14px;
+  margin: auto;
+  width: 50px;
+  height: 25px;
+  border-radius: 50%;
+}
+.btnOpps {
+  color: black;
+  font-size: 14px;
+  margin: auto;
+  width: 50px;
+  height: 25px;
+}
+</style>
+<body>
+<div class="footer">
+ 
+</div>
+<div class="himage">
+  <div class="htext">
+  <head>
+  <script language="javascript"></script>
+</head>
+<form name="sci-calc">
+ <table class="calculator" cellspacing="0" cellpadding="1">
+   <tr>
+     <td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="btnTop" name="btnTop" value="C" onclick="this.form.display.value=  0 "></td>
+     <td><input type="button" class="btnTop" name="btnTop" value="<--" onclick="deleteChar(this.form.display)"></td>
+     <td><input type="button" class="btnTop" name="btnTop" value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }"></td>
+     <td><input type="button" class="btnOpps" name="btnOpps" value="&#960;" onclick="addChar(this.form.display,'3.14159265359')"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="%" onclick=" percent(this.form.display)"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="btnNum" name="btnNum" value="7" onclick="addChar(this.form.display, '7')"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="8" onclick="addChar(this.form.display, '8')"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="9" onclick="addChar(this.form.display, '9')"></td>
+     <td><input type="button" class="btnOpps" name="btnOpps" value="x&#94;" onclick="if(checkNum(this.form.display.value)) { exp(this.form) }"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="/" onclick="addChar(this.form.display, '/')"></td>
+   <tr>
+     <td><input type="button" class="btnNum" name="btnNum" value="4" onclick="addChar(this.form.display, '4')"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="5" onclick="addChar(this.form.display, '5')"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="6" onclick="addChar(this.form.display, '6')"></td>
+     <td><input type="button" class="btnOpps" name="btnOpps" value="ln" onclick="if(checkNum(this.form.display.value)) { ln(this.form) }"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="*" onclick="addChar(this.form.display, '*')"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="btnNum" name="btnNum" value="1" onclick="addChar(this.form.display, '1')"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="2" onclick="addChar(this.form.display, '2')"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="3" onclick="addChar(this.form.display, '3')"></td>
+     <td><input type="button" class="btnOpps" name="btnOpps" value="&radic;" onclick="if(checkNum(this.form.display.value)) { sqrt(this.form) }"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="-" onclick="addChar(this.form.display, '-')"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="btnMath" name="btnMath" value="&#177" onclick="changeSign(this.form.display)"></td>
+     <td><input type="button" class="btnNum" name="btnNum" value="0" onclick="addChar(this.form.display, '0')"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="&#46;" onclick="addChar(this.form.display, '&#46;')"></td>
+     <td><input type="button" class="btnOpps" name="btnOpps" value="x&#50;" onclick="if(checkNum(this.form.display.value)) { square(this.form) }"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="+" onclick="addChar(this.form.display, '+')"></td>
+   </tr>
+   <tr>
+     <td><input type="button" class="btnMath" name="btnMath" value="(" onclick="addChar(this.form.display, '(')"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value=")" onclick="addChar(this.form.display,')')"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="cos" onclick="if(checkNum(this.form.display.value)) { cos(this.form) }"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="sin" onclick="if(checkNum(this.form.display.value)) { sin(this.form) }"></td>
+     <td><input type="button" class="btnMath" name="btnMath" value="tan" onclick="if(checkNum(this.form.display.value)) { tan(this.form) }"></td>
+  </tr>
+ </tabel>
+</form>
+<script>
+function addChar(input, character) {
+	if(input.value == null || input.value == "0")
+		input.value = character
+	else
+		input.value += character
+}
+
+function cos(form) {
+	form.display.value = Math.cos(form.display.value);
+}
+
+function sin(form) {
+	form.display.value = Math.sin(form.display.value);
+}
+
+function tan(form) {
+	form.display.value = Math.tan(form.display.value);
+}
+
+function sqrt(form) {
+	form.display.value = Math.sqrt(form.display.value);
+}
+
+function ln(form) {
+	form.display.value = Math.log(form.display.value);
+}
+
+function exp(form) {
+	form.display.value = Math.exp(form.display.value);
+}
+
+function deleteChar(input) {
+	input.value = input.value.substring(0, input.value.length - 1)
+}
+var val = 0.0;
+function percent(input) {
+  val = input.value;
+  input.value = input.value + "%";
+}
+
+function changeSign(input) {
+	if(input.value.substring(0, 1) == "-")
+		input.value = input.value.substring(1, input.value.length)
+	else
+		input.value = "-" + input.value
+}
+
+function compute(form) {
+    form.display.value = eval(form.display.value);
+  }
+
+
+function square(form) {
+	form.display.value = eval(form.display.value) * eval(form.display.value)
+}
+
+function checkNum(str) {
+	for (var i = 0; i < str.length; i++) {
+		var ch = str.charAt(i);
+		if (ch < "0" || ch > "9") {
+			if (ch != "/" && ch != "*" && ch != "+" && ch != "-" && ch != "."
+				&& ch != "(" && ch!= ")" && ch != "%") {
+				alert("invalid entry!")
+				return false
+				}
+			}
+		}
+		return true
+}
+</script>
+  </div>
+</div>
+</body>
+
+</html>
+
